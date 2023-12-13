@@ -7,27 +7,56 @@
     <title>Weather Form</title>
 </head>
 <body>
-    <label for="city" class="label-container">
-        <form>
-            <input type="text" placeholder="Enter your city" id="city" required/>
-        </form>
-    </label>
-    <button id="get-weather" class="btn">Get Weather</button>
+    <div class="field">
+        <label for="city" >
+            <form>
+                <input type="text" placeholder="Enter your city" id="city" required/>
+            </form>
+        </label>
+        <button id="get-weather" class="btn">Get Weather</button>
+    </div>
     <div id="container">
         <div id="weather-picture" >
             <img src="./Assets/Weather1018.svg" alt="weather">
         </div>
-        <!-- <div id="temp">
-        
+        <div class="temp">
+            <h2 id="location">Lagos</h2>
+            <p id="temperature">34°C</p>
+            <p id="description">few clouds</p>
         </div>
-        <div class="min-maxweather"></div>
-        <div class="weather-today"></div> -->
+        <div class="min-maxweather">
+            <p>Temperature Max: 24° Min:18°</p>
+        </div>
+        <div class="weather-today">
+            
+            <div class="header">
+                <p>today</p>
+                <p id="today">July, 21</p>
+            </div>
+            <div id="cards">
+                <div class="card">
+                    <p>19°C</p>
+                    <img src="./Assets/icon.svg" alt="temp">
+                    <p>15.00</p>
+                </div>
+                <div class="card">
+                    <p>19°C</p>
+                    <img src="./Assets/icon.svg" alt="temp">
+                    <p>15.00</p>
+                </div>
+                <div class="card">
+                    <p>19°C</p>
+                    <img src="./Assets/icon.svg" alt="temp">
+                    <p>15.00</p>
+                </div>
+                <div class="card">
+                    <p>19°C</p>
+                    <img src="./Assets/icon.svg" alt="temp">
+                    <p>15.00</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="temp">
-        <h2 id="location"></h2>
-        <p id="temperature"></p>
-        <p id="description"></p>
-      </div>
     </div>
     
 
