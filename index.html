@@ -7,29 +7,31 @@
     <title>Weather Form</title>
 </head>
 <body>
-    <label for="city">
-        <form>
-            <input type="text" placeholder="Enter your city" id="city" required/>
-        </form>
-    </label>
-    <button id="get-weather" class="btn">Get Weather</button>
+    <div class="field">
+        <label for="city" >
+            <form>
+                <input type="text" placeholder="Enter your city" id="city" required/>
+            </form>
+        </label>
+        <button id="get-weather" class="btn">Get Weather</button>
+    </div>
     <div id="container">
         <div id="weather-picture" >
             <img src="./Assets/Weather1018.svg" alt="weather">
         </div>
         <div class="temp">
-        <p>19°</p>
+            <h2 id="location">Lagos</h2>
+            <p id="temperature">34°C</p>
+            <p id="description">few clouds</p>
         </div>
         <div class="min-maxweather">
-            <p>Precipitations
-                Max: 24°   Min:18°
-            </p>
+            <p>Temperature Max: 24° Min:18°</p>
         </div>
         <div class="weather-today">
             
             <div class="header">
                 <p>today</p>
-                <p>July, 21</p>
+                <p id="today">July, 21</p>
             </div>
             <div id="cards">
                 <div class="card">
