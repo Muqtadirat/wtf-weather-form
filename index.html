@@ -7,7 +7,23 @@
     <title>Weather Form</title>
 </head>
 <body>
-    <h1>Weather</h1>
+    <label for="city">
+        <form>
+            <input type="text" placeholder="Enter your city" id="city" required/>
+        </form>
+    </label>
+    <button id="get-weather" class="btn">Get Weather</button>
+    <div id="container">
+        <div id="weather-picture" >
+            <img src="./Assets/Weather1018.svg" alt="weather">
+        </div>
+        <div class="temp">
+        
+        </div>
+        <div class="min-maxweather"></div>
+        <div class="weather-today"></div>
+    </div>
+    
 
     <script src="app.js"></script>
 </body>
