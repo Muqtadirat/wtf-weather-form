@@ -33,6 +33,7 @@
     border-radius: 50px;
     box-shadow: -40px 60px 150px 0px rgba(59, 38, 123, 0.70);
     display: flex;
+
     justify-content:center;
     align-items:center;
 }
@@ -49,6 +50,7 @@
 }
 .min-maxweather{
     color: #FFF;
+
     text-align: center;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Poppins;
@@ -73,4 +75,3 @@ h2 {
     display:flex;
     justify-content:space-around;
 }
-
