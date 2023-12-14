@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Weather Form</title>
-</head>
-<body>
-    <div class="field">
-        <label for="city" >
-            <form>
-                <input type="text" placeholder="Enter your city" id="city" required/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="weather-container">
+          <div class="header">
+            <div class="weather-header">
+              <h2>Weather</h2>
+            </div>
+            <form class="search-form" id="search-form">
+              <div class="row">
+                <div class="col-6">
+                  <input
+                    type="search"
+                    class="city-input"
+                    id="city-input"
+                    autofocus="on"
+                    autocomplete="off"
+                    placeholder="Type a city..."
+                  />
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="Search" class="btn btn-primary" />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Current"
+                    class="btn btn-success"
+                    id="current-button"
+                  />
+                </div>
+              </div>
             </form>
-        </label>
-        <button id="get-weather" class="btn">Get Weather</button>
-    </div>
-    <div id="container">
-        <div id="weather-picture" >
-            <img src="./Assets/Weather1018.svg" alt="weather">
-        </div>
-        <div class="temp">
-            <h2 id="location"></h2>
-            <p id="temperature"></p>
-            <p id="description"></p>
-        </div>
-        <div class="min-maxweather">
-            <p>Temperature Max: <span class="max-temp"></span> Min: <span class="min-temp"></span></p>
-        </div>
-        <div class="weather-today">
-            
-            <div class="header">
-                <p>today</p>
-                <p id="today">July, 21</p>
+            <h3 class="mt-4" id="city"></h3>
+            <ul>
+              <li>Last Updated: <span id="time"></span></li>
+              <li class="mt-10 status" id="description"></li>
+            </ul>
+            <div class="row">
+              <div class="col">
+                <h3>
+                  <img src="" alt="" id="icon" />
+                  <span id="temperature"></span>
+                  <span class="units"> °C </span>
+                </h3>
+              </div>
             </div>
-            <div id="cards">
-                <div class="card">
-                    <p>19°C</p>
-                    <img src="./Assets/icon.svg" alt="temp">
-                    <p>15.00</p>
-                </div>
-                <div class="card">
-                    <p>19°C</p>
-                    <img src="./Assets/icon.svg" alt="temp">
-                    <p>15.00</p>
-                </div>
-                <div class="card">
-                    <p>19°C</p>
-                    <img src="./Assets/icon.svg" alt="temp">
-                    <p>15.00</p>
-                </div>
-                <div class="card">
-                    <p>19°C</p>
-                    <img src="./Assets/icon.svg" alt="temp">
-                    <p>15.00</p>
-                </div>
-            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-
+      </div>
     </div>
-    
-
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
