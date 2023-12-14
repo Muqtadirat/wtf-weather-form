@@ -33,19 +33,36 @@ function formatDay(timestamp) {
 
 }
 
+
+
+
+
 function submitValue(event) {
-  event.preventDefault();
+    event.preventDefault();
   let city = document.querySelector("#city-input").value;
   search(city);
+  
+  
 }
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", submitValue);
 
+
 function search(city) {
   let apiKey = "3b7f41f709e5fa9dea292c8a3c7b4b11";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(weatherCondition);
-}
+    axios
+      .get(apiUrl)
+      .then(weatherCondition)
+      .catch((error) => {
+        if (error.response.status === 404) {
+          alert("Invalid city");
+        } else {
+          alert("Error fetching data");
+          console.error("Error:", error);
+        }
+      });
+    }
 
 function weatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
@@ -57,16 +74,29 @@ function weatherCondition(response) {
 }
 
 function searchLocation(position) {
-  let apiKey = "ce42d1d7d6398769e2d0d73d6dacbd87";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(weatherCondition);
+  
+    let apiKey = "ce42d1d7d6398769e2d0d73d6dacbd87";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(weatherCondition)
 }
+   
+
+  
+
+  
+  
+  
+
 function getCurrentLocation(event) {
-  event.preventDefault();
+  
+    event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+  
 }
 
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search("Lagos");
+
+
