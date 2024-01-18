@@ -25,7 +25,7 @@ Apply basic styling to make the app visually appealing.
 * Adedoyinsola Coker
 * Stella Chinonso-Ani
 * Fatimah Adebimpe
-* Ifeoma Anumege
+* Ifeoma Okpara Anumege
 * Muqtadirat Yussuff
 * Damilola Omotoyinbo
 * Adebisi Adepoju
